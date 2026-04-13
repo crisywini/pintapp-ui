@@ -1,5 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getItemById, addItem, getItems, updateItem, deleteItemById } from "../services/itemService";
+import { deleteOutfitById } from "../services/outfitService";
 
 export function useItems() {
     return useQuery({
@@ -9,7 +10,7 @@ export function useItems() {
 }
 
 
-export function useItemById(id) {
+export function useItem(id) {
     return useQuery({
         queryKey: ["items", id], 
         queryFn: () => getItemById(id), 
@@ -26,7 +27,7 @@ export function useAddItem() {
             qc.invalidateQueries({queryKey: ["items"]})
         }, 
         onError: (error) => {
-            console.log("Error while adding an item", error.message)
+            console.error("Error while adding an item", error.message)
         }
     })
 }
@@ -41,7 +42,7 @@ export function useUpdateItem(){
             })
         },
         onError: (error) => {
-            console.log("Error while updating an item", error.message)
+            console.error("Error while updating an item", error.message)
         }
     })
 }
@@ -49,14 +50,14 @@ export function useUpdateItem(){
 export function useDeleteItem() {
     const qc = useQueryClient()
     return useMutation({
-        mutationFn: (id) => deleteItemById(id), 
+        mutationFn: deleteOutfitById, 
         onSuccess: () => {
             qc.invalidateQueries({
                 queryKey: ["items"],
             })
         }, 
         onError: (error) => {
-            console.log("Error while deleting an item", error.message)
+            console.error("Error while deleting an item", error.message)
         }
     })
 }

@@ -13,7 +13,7 @@ export function useAddOutfit() {
     return useMutation({
         mutationFn: addOutfit, 
         onSuccess: () => qc.invalidateQueries({queryKey: ["outfits"]}), 
-        onError: (error) => console.log("Error while adding a new outfit", error.message),
+        onError: (error) => console.error("Error while adding a new outfit", error.message),
     })
 }
 
@@ -22,7 +22,7 @@ export function useUpdateOutfit() {
     return useMutation({
         mutationFn: ({id, data}) => updateOutfit(id, data), 
         onSuccess: () => qc.invalidateQueries({queryKey: ["outfits"]}), 
-        onError: (error) => console.log("Error while updating an outfit", error.message)
+        onError: (error) => console.error("Error while updating an outfit", error.message)
     })
 }
 
@@ -30,16 +30,16 @@ export function useUpdateOutfit() {
 export function useDeleteOutfitById() {
     const qc = useQueryClient()
     return useMutation({
-        mutationFn: (id) => deleteOutfitById(id), 
+        mutationFn: deleteOutfitById, 
         onSuccess: () => qc.invalidateQueries({queryKey: ["outfits"]}), 
-        onError: (error) => console.log("Error while deleting an outfit", error.message)
+        onError: (error) => console.error("Error while deleting an outfit", error.message)
     })
 }
 
 export function useOutfit(id) {
     return useQuery({
         queryKey: ["outfits", id], 
-        queryFn: () => getOutfitById(id), 
+        queryFn: getOutfitById, 
         enabled: !!id
     })
 
