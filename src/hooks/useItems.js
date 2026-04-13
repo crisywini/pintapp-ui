@@ -46,10 +46,10 @@ export function useUpdateItem(){
     })
 }
 
-export function useDeleteItem(id) {
+export function useDeleteItem() {
     const qc = useQueryClient()
     return useMutation({
-        mutationFn: deleteItemById, 
+        mutationFn: (id) => deleteItemById(id), 
         onSuccess: () => {
             qc.invalidateQueries({
                 queryKey: ["items"],
