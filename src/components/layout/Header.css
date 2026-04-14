@@ -1,0 +1,44 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_nav {
+    display: flex;
+    flex: 1;
+}
+
+.title {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.search_list {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+
+.header_links{
+    display: flex;
+    list-style: none; 
+    gap: 0.5rem;
+}
+
+.header_links li {
+    cursor: pointer;
+}
+
+.header_links li:hover {
+    color: gray;
+    text-decoration: underline;
+}
