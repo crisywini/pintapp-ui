@@ -1,0 +1,5 @@
+.footerCreativeCommons {
+    display: flex;
+    justify-content: center;
+    font-family: var(--classy-family)
+}

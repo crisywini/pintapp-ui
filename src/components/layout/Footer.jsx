@@ -1,7 +1,10 @@
+import './Footer.css'
 function Footer(){
     return (
         <footer>
-            <p>© 2026 Pintapp</p>
+            <div className='footerCreativeCommons'>
+                <p>© 2026 Pintapp</p>
+            </div>
         </footer>
     )
 }
