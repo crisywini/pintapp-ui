@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import './Header.css'
 import { useState } from "react";
+import { Search } from "lucide-react";
 
 function Header() {
 
@@ -11,20 +12,21 @@ function Header() {
 
             <nav className="header_nav">
                 <ul className="header_links">
-                    <li>Sport</li>
-                    <li>Casual</li>
-                    <li>Elegant</li>
-                    <li>Italian</li>
+                    <li>Closet</li>
+                    <li>Pinta</li>
+                    <li>LookBook</li>
+                    <li>Diary</li>
+                    <li>Ocassion</li>
                 </ul>
 
             </nav>
             <div className="title">
-                <h1>Pinta</h1>
+                <h1>CS</h1>
             </div>
 
             <div className="search">
-                <button onClick={() => setSearchOpen(!searchOpen)}>
-                    Search
+                <button onClick={() => setSearchOpen(!searchOpen)} className="searchButton">
+                    <Search size={20}/>
                 </button>
 
                 { searchOpen && (

@@ -7,12 +7,14 @@
 .header_nav {
     display: flex;
     flex: 1;
+    font-family: var(--classy-family);
 }
 
 .title {
     display: flex;
     flex: 1;
     justify-content: center;
+    font-family: var(--classy-family);
 }
 
 .search {
@@ -20,6 +22,13 @@
     justify-content: flex-end;
     flex: 1;
 }
+
+.searchButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 
 .search_list {
     display: flex;
@@ -31,7 +40,8 @@
 .header_links{
     display: flex;
     list-style: none; 
-    gap: 0.5rem;
+    gap: 2.5rem;
+    font-size: large;
 }
 
 .header_links li {
