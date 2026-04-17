@@ -15,12 +15,13 @@ const outfits = [
 ]*/
 
 const outfits = Object.entries(imageModules)
+.filter( ([path]) => !path.includes('17') && !path.includes('18'))
 .map(([path, module], index) => ({
     id: index +1, 
     name: `Look ${index +1}`, 
     rating: Math.floor(Math.random() * 10) + 1, 
     image: module.default,
-}))
+})).slice(0, 10)
 
 function getSize(rating) {
     if (rating >= 8) return 'card--large'
