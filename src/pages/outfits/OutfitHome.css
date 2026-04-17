@@ -1,0 +1,31 @@
+.grid {
+    columns: 5; 
+    gap: 1rem;
+    padding: 1rem;
+}
+/*
+So for rem, the browser has a base of 16 px, 
+REM is relative to that -> 1rem is 16 px, 0.5rem is 8px, 1.5 rem is 24px, 2 rem is 32 px
+*/
+.card {
+    break-inside: avoid;
+    margin-bottom: 1rem; 
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+
+.card--large { width: 100%;}
+.card--medium { width: 100%;}
+.card--small { width: 100%;}
