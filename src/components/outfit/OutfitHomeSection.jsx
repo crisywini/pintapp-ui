@@ -33,13 +33,10 @@ function getSize(rating) {
 function OutfitHomeSection() {
     return (
         <div className="grid">
-            {outfits.map(outfit =>(
-                <div key={outfit.id} className={`card ${getSize(outfit.rating)}`}>
-                    <img src={outfit.image} alt={outfit.name}></img>
-                </div>                
-            ) )}
 
-
+            <div className={`card ${getSize(outfits.at(0).image)}`}>
+                <img src={outfits.at(0).image} alt={outfits.at(0).name}></img>
+            </div>
         </div>
     )
 }

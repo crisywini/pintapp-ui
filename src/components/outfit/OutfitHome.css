@@ -27,5 +27,5 @@ REM is relative to that -> 1rem is 16 px, 0.5rem is 8px, 1.5 rem is 24px, 2 rem 
 }
 
 .card--large { width: 100%;}
-.card--medium { width: 100%;}
-.card--small { width: 100%;}
+.card--medium { width: 80%;}
+.card--small { width: 40%;}
