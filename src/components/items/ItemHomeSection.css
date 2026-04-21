@@ -1,0 +1,32 @@
+.itemsWrapper {
+  overflow: hidden;
+  display: flex;
+}
+
+.itemsTrack {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.itemsWrapper:hover .itemsTrack {
+  animation-play-state: paused;
+}
+
+.item {
+  flex-shrink: 0;
+  height: 250px;
+  width: 180px;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
