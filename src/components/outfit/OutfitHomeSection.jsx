@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './OutfitHome.css'
 
 
@@ -32,11 +33,34 @@ function getSize(rating) {
 
 function OutfitHomeSection() {
     return (
-        <div className="grid">
+        <div className="outfitContainer">
 
-            <div className={`card ${getSize(outfits.at(0).image)}`}>
-                <img src={outfits.at(0).image} alt={outfits.at(0).name}></img>
+            <div className="seeTheLookContainer">
+                <div className={`outfitSectionOne card--large`}>
+                    <img src={outfits.at(1).image} alt={outfits.at(1).name}></img>
+                </div>
+                <Link to="/" className="seeTheLookLink">
+                        See the Looks
+                </Link>
             </div>
+
+            <div className="outfitsGridContainer">
+                {outfits.slice(0, 4).map(outfit =>(
+                    <div key={outfit.id} >
+                        <img src={outfit.image} alt={outfit.name}></img>
+                        </div>                
+                ) )}
+            </div>
+
+            <div className="whatToWearContainer">
+                <Link to="/" className="seeTheLookLink">
+                        What to wear?
+                </Link>
+                <div className={`outfitSectionOne card--large`}>
+                    <img src={outfits.at(1).image} alt={outfits.at(1).name}></img>
+                </div>
+            </div>
+            
         </div>
     )
 }

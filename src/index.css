@@ -4,6 +4,7 @@
   --mono: ui-monospace, Consolas, monospace;
   --heavy-family: "Fraunces", serif; 
   --classy-family: "Cormorant Garamond", serif;
-  font-family: var(--france-family);
+  --classy-family-cursive: "Cormorant Garamond", cursive;
+  --elegant-unique-italic: "Pinyon Script", cursive; 
   letter-spacing: 0.18px;
 }
