@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/home/Home'
+import Layout from './components/layout/layout'
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <h1>Welcome to Pintapp</h1>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   )
 }
 

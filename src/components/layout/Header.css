@@ -1,0 +1,55 @@
+.header{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_nav {
+    display: flex;
+    flex: 1;
+    font-family: var(--classy-family);
+}
+
+.title {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    font-family: var(--classy-family);
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.searchButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.search_list {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+
+.header_links{
+    display: flex;
+    list-style: none; 
+    gap: 2.5rem;
+    font-size: large;
+}
+
+.header_links li {
+    cursor: pointer;
+}
+
+.header_links li:hover {
+    color: gray;
+    text-decoration: underline;
+}

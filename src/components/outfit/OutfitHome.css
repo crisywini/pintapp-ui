@@ -1,0 +1,91 @@
+.grid {
+    columns: 5; 
+    gap: 1rem;
+    padding: 1rem;
+}
+/*
+So for rem, the browser has a base of 16 px, 
+REM is relative to that -> 1rem is 16 px, 0.5rem is 8px, 1.5 rem is 24px, 2 rem is 32 px
+*/
+.card--large { 
+    width: 100%;
+    height: 100%;
+}
+.card--medium { width: 80%;}
+.card--small { width: 20%;}
+
+
+.outfitSectionOne {
+    break-inside: avoid;
+    margin-bottom: 1rem; 
+    overflow: hidden;
+    width: 200px;  
+    height: 600px; 
+}
+.outfitSectionOne img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.outfitSectionOne:hover img {
+    transform: scale(1.03);
+}
+
+.seeTheLookLink {
+    text-decoration: none;
+    color: inherit;
+    flex-direction: column;
+    font-family: var(--classy-family-cursive);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seeTheLookContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.whatToWearContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.outfitContainer{
+    display: flex;
+    gap: 5px;
+}
+
+.outfitsGridContainer {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    break-inside: avoid;
+    margin-bottom: 1rem; 
+    overflow: hidden;
+    height: 650px;
+}
+
+.outfitsGridContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top;
+}
+
+.imageContainer img {
+    transition: transform 0.3s ease;
+}
+
+.imageContainer:hover img {
+    transform: scale(1.03);
+}

@@ -1,7 +1,7 @@
 import api from "./api";
 
 
-export const getItems = () => api.get("/items").then(r => r.data)
+export const getItems = () => api.get("/items").then(r => r.data.items)
 
 export const addItem = (data) => api.post("/items", data).then(r => r.data)
 
