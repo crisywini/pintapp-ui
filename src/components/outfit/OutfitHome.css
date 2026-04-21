@@ -56,6 +56,7 @@ REM is relative to that -> 1rem is 16 px, 0.5rem is 8px, 1.5 rem is 24px, 2 rem 
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    gap: 30px;
 }
 
 .outfitContainer{
@@ -71,10 +72,20 @@ REM is relative to that -> 1rem is 16 px, 0.5rem is 8px, 1.5 rem is 24px, 2 rem 
     break-inside: avoid;
     margin-bottom: 1rem; 
     overflow: hidden;
+    height: 650px;
 }
 
 .outfitsGridContainer img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: top;
+}
+
+.imageContainer img {
+    transition: transform 0.3s ease;
+}
+
+.imageContainer:hover img {
+    transform: scale(1.03);
 }

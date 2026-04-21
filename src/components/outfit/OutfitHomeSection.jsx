@@ -45,8 +45,8 @@ function OutfitHomeSection() {
             </div>
 
             <div className="outfitsGridContainer">
-                {outfits.slice(0, 4).map(outfit =>(
-                    <div key={outfit.id} >
+                {outfits.slice(0,8).map(outfit =>(
+                    <div key={outfit.id} className="imageContainer">
                         <img src={outfit.image} alt={outfit.name}></img>
                         </div>                
                 ) )}
@@ -57,7 +57,7 @@ function OutfitHomeSection() {
                         What to wear?
                 </Link>
                 <div className={`outfitSectionOne card--large`}>
-                    <img src={outfits.at(1).image} alt={outfits.at(1).name}></img>
+                    <img src={outfits.at(9).image} alt={outfits.at(1).name}></img>
                 </div>
             </div>
             
