@@ -11,12 +11,14 @@ const line = OPENING_LINES[Math.floor(Math.random() * OPENING_LINES.length)]
 
 
 
-function SaveImageForm({data, onChange}) {
+function SaveImageStep({data, onChange}) {
 
     return (
         <div className="imageContainer">
             <h2>{line}</h2>
-            <input type="image" value={data.image}>
+            <input type="image" 
+                value={data.image} 
+                onChange={e =>  onChange({image: e.target.value})}> 
             </input>
 
         </div>
@@ -24,4 +26,4 @@ function SaveImageForm({data, onChange}) {
 
 }
 
-export default SaveImageForm
+export default SaveImageStep
