@@ -1,0 +1,19 @@
+.itemSlidesComponentWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.itemSlideNavigatorWrapper{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.itemFormWrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100dvh - 90px);
+    font-family: var(--classy-family-cursive);
+}
