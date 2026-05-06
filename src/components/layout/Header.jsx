@@ -12,7 +12,9 @@ function Header() {
 
             <nav className="header_nav">
                 <ul className="header_links">
-                    <li>Closet</li>
+                    <li>
+                        <Link to='/items'>Closet</Link>
+                    </li>
                     <li>Pinta</li>
                     <li>LookBook</li>
                     <li>Diary</li>
