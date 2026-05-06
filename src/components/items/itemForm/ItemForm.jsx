@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import './ItemForm.css'
 import SaveImageStep from './steps/01_SaveImageForm'
+import SaveNameAndCategory from './steps/02_SaveNameAndCategoryForm'
 
 
-const STEPS = [SaveImageStep]
+const STEPS = [SaveImageStep, SaveNameAndCategory]
 
 function ItemForm() {
 
