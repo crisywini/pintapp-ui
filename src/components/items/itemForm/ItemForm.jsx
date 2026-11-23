@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import './ItemForm.css'
 import SaveImageStep from './steps/01_SaveImageForm'
-import SaveNameAndCategory from './steps/02_SaveNameAndCategoryForm'
-import SaveStoryLocationAndDate from './steps/03_SaveStoryLocationAndDateForm'
+import SaveBasicInformation from './steps/02_SaveBasicInformation'
+import SaveColorAndAppearance from './steps/03_SaveColorAndAppearance'
+import SaveStyleAndFit from './steps/04_SaveStyleAndFit'
+import SaveContextAndAvailability from './steps/05_SaveContextAndAvailability'
 
 
-const STEPS = [SaveImageStep, SaveNameAndCategory, SaveStoryLocationAndDate]
+const STEPS = [SaveImageStep, SaveBasicInformation, SaveColorAndAppearance, SaveStyleAndFit, SaveContextAndAvailability]
 
 function ItemForm() {
 

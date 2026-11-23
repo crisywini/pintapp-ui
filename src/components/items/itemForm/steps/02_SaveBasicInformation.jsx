@@ -29,7 +29,7 @@ const nameLine = NAME_PROMPT_LINES[Math.floor(Math.random() * NAME_PROMPT_LINES.
 const categoryLine = CATEGORY_PROMPT_LINES[Math.floor(Math.random() * CATEGORY_PROMPT_LINES.length)]
 
 
-function SaveNameAndCategory({data, onChange}) {
+function SaveBasicInformation({data, onChange}) {
     return (
         <div className="nameAndCategoryItemForm">
             <h2>{nameLine}</h2>
@@ -40,4 +40,4 @@ function SaveNameAndCategory({data, onChange}) {
     )
 }
 
-export default SaveNameAndCategory
+export default SaveBasicInformation
